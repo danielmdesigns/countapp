@@ -7,8 +7,8 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/calc.css">
 </head>
-<body>
 
+<body style="overflow:hidden; margin:0">
 <main id="calc">
   <div class="row">
   	<header><strong>minibra.in</strong></header>
@@ -17,36 +17,45 @@
   	<div id="display" class="display">0</div>
   </div>
   <div class="row">
-    <div class="btn" data-value="1">1</div>
-    <div class="btn" data-value="2">2</div>
-    <div class="btn" data-value="3">3</div>
-    <div class="btn" data-value="×">×</div>
+    <div class="btn hvr" data-value="1">1</div>
+    <div class="btn hvr" data-value="2">2</div>
+    <div class="btn hvr" data-value="3">3</div>
+    <div class="btn hvr" data-value="×">×</div>
   </div>
   <div class="row">
-    <div class="btn" data-value="4">4</div>
-    <div class="btn" data-value="5">5</div>
-    <div class="btn" data-value="6">6</div>
-    <div class="btn" data-value="÷">÷</div>
+    <div class="btn hvr" data-value="4">4</div>
+    <div class="btn hvr" data-value="5">5</div>
+    <div class="btn hvr" data-value="6">6</div>
+    <div class="btn hvr" data-value="÷">÷</div>
   </div>
   <div class="row">
-    <div class="btn" data-value="7">7</div>
-    <div class="btn" data-value="8">8</div>
-    <div class="btn" data-value="9">9</div>
-    <div class="btn" data-value="-">-</div>
+    <div class="btn hvr" data-value="7">7</div>
+    <div class="btn hvr" data-value="8">8</div>
+    <div class="btn hvr" data-value="9">9</div>
+    <div class="btn hvr" data-value="-">-</div>
   </div>
   <div class="row"> 
-    <div class="btn" data-value=".">.</div>
-    <div class="btn" data-value="0">0</div>
-    <div class="btn" data-value="clear">c</div>
-    <div class="btn" data-value="+">+</div>
+    <div class="btn hvr" data-value=".">.</div>
+    <div class="btn hvr" data-value="0">0</div>
+    <div class="btn hvr" data-value="clear">c</div>
+    <div class="btn hvr" data-value="+">+</div>
   </div>
   <div class="row">
-  	<div class="btn eval" data-value="="><strong>=</strong></div>
+  	<div class="btn eval hvr" data-value="="><strong>=</strong></div>
   </div>
 </main>
+<script language="javascript">
+function autoResizeDiv()
+{
+	document.getElementById('calc').style.height = window.innerHeight +'px';
+}
+window.onresize = autoResizeDiv;
+autoResizeDiv();
+</script>
 
 <script src="js/jquery.js"></script>
 <script src="js/calc.js"></script>
+<script src="js/interaction.js"></script>
 <!--<script src="js/mobile.js"></script>-->
 <!--<script src="js/mobile-calc.js"></script>-->
 
