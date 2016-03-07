@@ -54,14 +54,14 @@
         displayValue += value;
       }
     }
-	/*CHECK LENGTH OF BUTTONS*/
+	/*CHECK DISPLAY LENGTH*/
 	if(displayValue.length >= 10 && displayValue.length <= 16){
 		$(".display").css("font-size", "2em");
   	}else if(displayValue.length >= 16 && displayValue.length <= 30){
 		$(".display").css("font-size", "1em");
 	}else if(displayValue.length >= 30){
 		$(".btn").addClass("disable");
-	}else{
+	}else if(displayValue.length <= 10){
 		$(".display").css("font-size", "3em");
 	}
 	/*INSERT*/
