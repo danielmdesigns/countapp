@@ -1,0 +1,99 @@
+$gray: #f6f6f6
+$drk-blue: #0c69db
+$blue: #1673e6
+$white: #FFFFFF
+
+*
+  font-family: 'Roboto', sans-serif
+
+body
+	background-color: $gray
+
+main
+  max-width: 300px
+  margin: 50px auto 0
+
+.header
+  background-color: $drk-blue
+  color: white
+  padding: 2px 0
+  h1
+    font-size: 0.8rem
+    text-align: center
+    font-weight: 100
+
+/* this is the shit that matters */
+.row
+  display: table
+  width: 100%
+
+.btn
+  /*border: 1px solid black*/
+  width: 25%
+  text-align: center
+  display: table-cell
+  padding: 20px 0
+  font-weight: 300
+  cursor: pointer
+  background-color: $blue
+  transition: background-color 0.25s ease-in
+  color: $white
+  &:hover
+    background-color: lighten($drk-blue, 2%)
+  
+.display
+  padding: 30px 20px 30px 0
+  /*border: 1px solid black*/
+  background-color: $blue
+  color: $white
+  text-align: right
+  font-size: 3rem
+  font-weight: 100
+  
+.eval
+  padding: 30px 0
+  background-color: $white
+  text-align: center
+  color: $blue
+  font-weight: 600
+  font-size: 0.8rem
+  letter-spacing: 2px
+  cursor: pointer
+  box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.7)
+  transition: all 0.25s ease-in
+  -webkit-transition: all 0.25s ease-in
+  &:hover
+  	box-shadow: inset 0 20px 20px -19px rgba(0, 0, 0, 0.8)
+  	color: $drk-blue
+  	background-color: $white
+	
+.hvr
+  vertical-align: middle
+  -webkit-transform: translateZ(0)
+  transform: translateZ(0)
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+  -moz-osx-font-smoothing: grayscale
+  position: relative
+  overflow: hidden
+
+.hvr:after
+  content: ""
+  position: absolute
+  z-index: -1
+  left: 50%
+  right: 50%
+  bottom: 0
+  background: $drk-blue
+  height: 3px
+  -webkit-transition-property: left, right
+  transition-property: left, right
+  -webkit-transition-duration: 0.1s
+  transition-duration: 0.1s
+  -webkit-transition-timing-function: ease-out
+  transition-timing-function: ease-out
+
+.hvr:active:after
+  left: 0
+  right: 0
+  
