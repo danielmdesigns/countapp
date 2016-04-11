@@ -14,21 +14,30 @@ main
   margin: 50px auto 0
 
 .header
-  background-color: $drk-blue
-  color: white
-  padding: 2px 0
-  h1
-    font-size: 0.8rem
-    text-align: center
-    font-weight: 100
+	background-color: $drk-blue
+	color: white
+	padding: 8px 0
+  
+h1
+	padding-left: 20px
+	font-weight: 300
+	text-align: left
+	letter-spacing: 1px
+	font-size: 0.8rem
+	display: inline
+  
+.fa-info-circle
+	font-size: 0.8rem
+	text-align: right
+	padding-right: 20px
+	float: right
+	line-height: 20px
 
-/* this is the shit that matters */
 .row
   display: table
   width: 100%
 
 .btn
-  /*border: 1px solid black*/
   width: 25%
   text-align: center
   display: table-cell
@@ -36,14 +45,15 @@ main
   font-weight: 300
   cursor: pointer
   background-color: $blue
-  transition: background-color 0.25s ease-in
+  transition: background-color 0.3s ease-in-out
   color: $white
   &:hover
-    background-color: lighten($drk-blue, 2%)
+    background-color: lighten($drk-blue, 5%)
   
 .display
-  padding: 30px 20px 30px 0
-  /*border: 1px solid black*/
+  padding: 30px 30px 30px 0
+  max-width: 270px
+  overflow: hidden
   background-color: $blue
   color: $white
   text-align: right
@@ -60,8 +70,8 @@ main
   letter-spacing: 2px
   cursor: pointer
   box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.7)
-  transition: all 0.25s ease-in
-  -webkit-transition: all 0.25s ease-in
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
   &:hover
   	box-shadow: inset 0 20px 20px -19px rgba(0, 0, 0, 0.8)
   	color: $drk-blue

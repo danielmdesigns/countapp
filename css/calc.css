@@ -14,23 +14,32 @@ main {
 .header {
   background-color: #0c69db;
   color: white;
-  padding: 2px 0;
+  padding: 8px 0;
 }
 
-.header h1 {
+h1 {
+  padding-left: 20px;
+  font-weight: 300;
+  text-align: left;
+  letter-spacing: 1px;
   font-size: 0.8rem;
-  text-align: center;
-  font-weight: 100;
+  display: inline;
 }
 
-/* this is the shit that matters */
+.fa-info-circle {
+  font-size: 0.8rem;
+  text-align: right;
+  padding-right: 20px;
+  float: right;
+  line-height: 20px;
+}
+
 .row {
   display: table;
   width: 100%;
 }
 
 .btn {
-  /*border: 1px solid black*/
   width: 25%;
   text-align: center;
   display: table-cell;
@@ -38,17 +47,18 @@ main {
   font-weight: 300;
   cursor: pointer;
   background-color: #1673e6;
-  transition: background-color 0.25s ease-in;
+  transition: background-color 0.3s ease-in-out;
   color: #FFFFFF;
 }
 
 .btn:hover {
-  background-color: #0d6ee5;
+  background-color: #0f75f2;
 }
 
 .display {
-  padding: 30px 20px 30px 0;
-  /*border: 1px solid black*/
+  padding: 30px 30px 30px 0;
+  max-width: 270px;
+  overflow: hidden;
   background-color: #1673e6;
   color: #FFFFFF;
   text-align: right;
@@ -66,8 +76,8 @@ main {
   letter-spacing: 2px;
   cursor: pointer;
   box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.7);
-  transition: all 0.25s ease-in;
-  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
 }
 
 .eval:hover {
