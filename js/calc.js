@@ -63,7 +63,9 @@
 		$(".btn").addClass("disable");
 	}else if(displayValue.length <= 10){
 		$(".display").css("font-size", "3em");
-	}
+	}else{
+    $(".display").css("font-size", "3em");
+  }
 	/*INSERT*/
     $(".display").text(displayValue);
   };
