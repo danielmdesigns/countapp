@@ -26,7 +26,17 @@ h1 {
   display: inline;
 }
 
-.fa-info-circle {
+h2 {
+  font-weight: 100;
+  color: #1673e6;
+}
+
+p {
+  font-weight: 300;
+  color: #c3c3c3;
+}
+
+.modal-icon {
   font-size: 0.8rem;
   text-align: right;
   padding-right: 20px;
@@ -117,4 +127,57 @@ h1 {
 .hvr:active:after {
   left: 0;
   right: 0;
+}
+
+.modal-container:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.modal-container:closed {
+  display: none;
+}
+
+.modal {
+  box-sizing: border-box;
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+  display: block;
+  background: #FFFFFF;
+  padding: 40px;
+  width: 600px;
+  max-width: 100%;
+  z-index: 1;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  color: #1673e6;
+  font-size: 14px;
+  padding: 15px;
+  cursor: pointer;
+  float: right;
+  outline: none;
+}
+
+button:hover {
+  background-color: #f6f6f6;
+}
+
+input {
+  width: 100%;
+  outline: none;
+  padding: 10px 0;
+  margin-bottom: 10px;
 }
