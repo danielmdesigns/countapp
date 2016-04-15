@@ -1,56 +1,141 @@
 * {
-  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F6F6F6;
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+}
+
+body,
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 main {
-  max-width: 350px;
-  margin: 50px auto 0;
+  display: flex;
+  flex-direction: column;
+  background: #f4c539;
+  background: -webkit-linear-gradient(#f4c539, #f2ae1f, #eb9100);
+  background: -o-linear-gradient(#f4c539, #f2ae1f, #eb9100);
+  background: -moz-linear-gradient(#f4c539, #f2ae1f, #eb9100);
+  background: linear-gradient(#f4c539, #f2ae1f, #eb9100);
 }
 
-.header {
-  background-color: gray;
-  color: white;
-  padding: 5px 0;
-}
-.header h1 {
-  font-size: 1rem;
-  text-align: center;
-  font-weight: 100;
+@media (min-width: 600px) {
+  main {
+    position: relative;
+    margin: 0 auto;
+    max-width: 600px;
+  }
 }
 
-/* this is the shit that matters */
 .row {
-  display: table;
-  width: 100%;
+  flex: 7;
+  display: flex;
+  flex-direction: row;
 }
 
+.display,
 .btn {
-  border: 1px solid black;
-  width: 25%;
+  flex: 5;
+  display: flex;
   text-align: center;
-  display: table-cell;
-  padding: 20px 0;
-  font-weight: 300;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  justify-content: center;
+  flex-flow: column wrap;
 }
-.btn:hover {
-  background-color: rgba(0, 0, 0, 0.07);
+
+header {
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+}
+
+header svg {
+  height: 1.5rem;
+  float: left;
+  fill: #FFFFFF;
+  margin-top: 14px;
+  margin-left: 25px;
+}
+
+header .icon {
+  font-size: 1.125rem;
+  float: right;
+  margin-right: 25px;
+}
+
+a.link--white,
+a.link--white:visited,
+a.link--white:hover,
+a.link--white:active,
+a.link--white:focus {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+a.link--primary,
+a.link--primary:visited {
+  color: #f4c539;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+a.link--primary:hover,
+a.link--primary:active,
+a.link--primary:focus,
+a.link--primary:visited:hover,
+a.link--primary:visited:active,
+a.link--primary:visited:focus {
+  color: #eb9100;
 }
 
 .display {
-  padding: 30px 20px 30px 0;
-  border: 1px solid black;
-  text-align: right;
-  font-size: 3rem;
+  width: 100%;
+  font-size: 3.5em;
   font-weight: 100;
+  text-align: right;
+  padding: 20px;
+  max-width: 599px;
+  overflow: hidden;
+}
+
+button,
+.btn,
+.eval,
+.close {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active {
+  transform: scale(0.8);
 }
 
 .eval {
-  padding: 25px 0;
+  flex: 1 1 20%;
+  background-color: #FFFFFF;
+  color: #eb9100;
+  font-size: 2rem;
+  box-shadow: inset 0 20px 20px -20px #7B7B7B;
 }
 
-/* hvr effects */
+.eval:hover {
+  box-shadow: inset 0 20px 20px -20px #626262;
+}
+
+.eval:active {
+  transform: scale(1);
+}
+
 .hvr {
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -69,8 +154,8 @@ main {
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: tomato;
-  height: 3px;
+  background: #eb9100;
+  height: 4px;
   -webkit-transition-property: left, right;
   transition-property: left, right;
   -webkit-transition-duration: 0.1s;
@@ -82,4 +167,89 @@ main {
 .hvr:active:after {
   left: 0;
   right: 0;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #f4c539;
+}
+
+p {
+  margin: 20px 0;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.modal-container:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.modal-container:closed {
+  display: none;
+}
+
+.modal {
+  box-sizing: border-box;
+  position: fixed;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  background: white;
+  padding: 40px;
+  width: 600px;
+  max-width: 100%;
+  z-index: 1;
+  color: #333;
+}
+
+.close {
+  color: #c3c3c3;
+  font-size: 1rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.close:focus {
+  outline: none;
+}
+
+.close:hover {
+  color: #7B7B7B;
+}
+
+.btn-main {
+  background-color: #f4c539;
+  max-width: 200px;
+  padding: 15px 30px;
+  border-radius: 100px;
+  border: 0;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+}
+
+.btn-main:hover {
+  background-color: #f2ae1f;
+  box-shadow: 0 0 20px 4px #fbfbfb;
 }
