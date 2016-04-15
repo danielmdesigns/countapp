@@ -64,6 +64,7 @@
 	}else if(displayValue.length <= 10){
 		$(".display").css("font-size", "3.5em");
 	}else{
+    $(".display").css("font-size", "3.5em");
   }
 	/*INSERT*/
     $(".display").text(displayValue);
