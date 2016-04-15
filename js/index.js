@@ -8,7 +8,7 @@
   
   var displayValue = "0";
   
-  $(".btn").on("click", function(){
+  $(".btn").on("click touch", function(){
     var btnValue = $(this).data("value");
     if(btnValue === "="){
 	  displayValue = displayValue.replace(/×/g , "*");
@@ -62,14 +62,25 @@
 	}else if(displayValue.length >= 30){
 		$(".btn").addClass("disable");
 	}else if(displayValue.length <= 10){
-		$(".display").css("font-size", "3em");
+		$(".display").css("font-size", "3.5em");
 	}else{
-    $(".display").css("font-size", "3em");
   }
 	/*INSERT*/
     $(".display").text(displayValue);
   };
-  
-  
-  
+
 })();
+
+//MODAL POPUP
+$(".modal-container").hide();
+$(".open-modal").on("click", function(event){
+  "use strict";
+  event.preventDefault();
+  event.stopPropagation();
+  $("#modal").fadeIn();
+});
+
+$(this).on("click", function(){
+  "use strict";
+  $("#modal").fadeOut();
+});
