@@ -2,9 +2,9 @@ $white: #FFFFFF
 $gray: #F6F6F6
 $drk-gray: #7B7B7B
 $black: #333
-$primary: #f4c539
-$secondary: #f2ae1f
-$tertiary: #eb9100
+$primary: #fd2660
+$secondary: #dc22a3
+$tertiary: #c420d4
 
 *
   padding: 0
@@ -82,7 +82,7 @@ a.link--primary:visited
   &:hover,
   &:active,
   &:focus
-    color: $tertiary
+    color: darken($primary, 5%)
   
 .display
   width: 100%
@@ -215,5 +215,5 @@ p
   transition: all .2s ease-in
   text-decoration: none
   &:hover
-    background-color: $secondary
+    background-color: darken($primary, 5%)
     box-shadow: 0 0 20px 4px lighten($drk-gray, 50%)
