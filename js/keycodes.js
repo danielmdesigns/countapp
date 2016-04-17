@@ -1,3 +1,7 @@
+
+
+
+
 // JavaScript Document
 //self invoking annoyomus function
 //has no name, and runs automaticlly
@@ -31,6 +35,28 @@
       updateDisplay(btnValue, false);
     }
   });
+  
+//EQUAL & CLEAR KEYPAD VALUES
+$(document).keydown(function(event){
+  var displayValue = "0";
+  var keycode = event.which;
+  if(keycode === 13){
+	  displayValue = displayValue.replace(/×/g , "*");
+	  displayValue = displayValue.replace(/÷/g , "/");
+	  updateDisplay(processAnswer(), true);
+  }else if(keycode === 8){
+	  updateDisplay("0", true);
+  }else{
+	  updateDisplay(keycode, false);
+  }
+});
+
+$(document).keypress(function(e){
+    e = e || event;
+  //console.log(String.fromCharCode(e.keyCode));
+  displayValue = String.fromCharCode(e.keyCode + "-");
+  displayValue = displayValue.substr(0, displayValue.length-1)
+});
 
   var processAnswer = function(){
     try{
@@ -41,19 +67,19 @@
       }
   };
   
-  var updateDisplay = function(value, overwrite){
- 
-    displayValue = displayValue.toString();
-    
-    if(overwrite === true){
-      displayValue = value;
-    }else{
-      if(displayValue === "0" || displayValue === "+" || displayValue === "×" || displayValue === "÷" || displayValue === "Error" || displayValue === "Infinity"){
-        displayValue = value;
-      }else{
-        displayValue += value;
-      }
-    }
+  
+var updateDisplay = function(value, overwrite){
+  displayValue = displayValue.toString();
+  if(overwrite === true){
+	displayValue = value;
+  }else{
+	if(displayValue === "0" || displayValue === "+" || displayValue === "×" || displayValue === "÷" || displayValue === "Error" || displayValue === "Infinity"){
+	  displayValue = value;
+	}else{
+	  displayValue += value;
+	}
+  }
+	
 	/*CHECK DISPLAY LENGTH*/
 	if(displayValue.length >= 10 && displayValue.length <= 16){
 		$(".display").css("font-size", "2em");
