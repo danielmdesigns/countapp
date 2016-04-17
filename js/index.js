@@ -110,7 +110,7 @@ var updateDisplay = function(value, overwrite){
 	  displayValue += value;
 	}
   }
-  /*CHECK DISPLAY LENGTH*/
+  //CHECK DISPLAY LENGTH
   if(displayValue.length >= 10 && displayValue.length <= 16){
 	  $(".display").css("font-size", "2em");
   }else if(displayValue.length >= 16 && displayValue.length <= 30){
@@ -122,7 +122,7 @@ var updateDisplay = function(value, overwrite){
   }else{
   $(".display").css("font-size", "3.5em");
 }
-  /*INSERT*/
+  //UPDATE DISPLAY BASED ON LENGTH
   $(".display").text(displayValue);
 };
 
