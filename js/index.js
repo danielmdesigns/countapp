@@ -35,11 +35,14 @@ $(".btn").on("click touch", function(){
 
 //KEYPAD
 $(document).keydown(function(event) {
-  var displayValue = "0";
+  //var displayValue = "0";
   var keycode = event.which;
-  if ((keycode >= 48 && keycode <= 57) || (keycode >= 96 && keycode <= 111) || (keycode >= 187 && keycode <= 191) || (keycode === 13) || (keycode === 8)) {
-    if(keycode === 13){
-      displayValue = displayValue.replace(/÷/g, "/");
+  //BETWEEN 48 - 57
+  //BETWEEN 96 - 111
+  //13, 8
+  if ((keycode >= 48 && keycode <= 57) || (keycode >= 96 && keycode <= 111) || (keycode >= 187 && keycode <= 191) || (keycode >= 12 && keycode <= 13) || keycode === 8 || keycode === 46) {
+    if(keycode === 13 || keycode === 187){
+      displayValue = displayValue.replace(/×/g, "*");
       displayValue = displayValue.replace(/÷/g, "/");
       updateDisplay(processAnswer(), true);
     }else if(keycode === 48){
@@ -62,13 +65,13 @@ $(document).keydown(function(event) {
       updateDisplay("8", false);
     }else if(keycode === 57){
       updateDisplay("9", false);
-    }else if(keycode === 8){
+    }else if(keycode === 8 || keycode === 12 || keycode === 46){
       updateDisplay("0", true);
     }else if(keycode === 106){
       updateDisplay("×", false);
     }else if(keycode === 107){
       updateDisplay("+", false);
-    }else if(keycode === 108){
+    }else if(keycode === 108 || keycode === 110 || keycode === 190){
       updateDisplay(".", false);
     }else if(keycode === 109){
       updateDisplay("-", false);
@@ -76,8 +79,6 @@ $(document).keydown(function(event) {
       updateDisplay("÷", false);
     }else if(keycode === 189){
       updateDisplay("-");
-    }else if(keycode === 190){
-      updateDisplay(".", false);
     }else if(keycode === 191){
       updateDisplay("/", false);
     }else{
