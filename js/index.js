@@ -141,3 +141,14 @@ $(".close").on("click", function(){
   "use strict";
   $("#modal").fadeOut();
 });
+
+
+
+//RUNNING IN APP MODE
+if(window.navigator.standalone){
+	//alert("APP MODE");
+	$("header").css("margin-top","35px");
+}else{
+	//alert("Desktop...");
+	$("header").css("margin-top","0");
+}
