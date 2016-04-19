@@ -35,8 +35,7 @@ $(".btn").on("click touch", function(){
 
 //KEYPAD
 $(document).keydown(function(event) {
-  //var displayValue = "0";
-  var keycode = event.which;
+  var keycode = event.which || event.charCode || event.keyCode;
   //BETWEEN 48 - 57
   //BETWEEN 96 - 111
   //13, 8
@@ -45,25 +44,25 @@ $(document).keydown(function(event) {
       displayValue = displayValue.replace(/×/g, "*");
       displayValue = displayValue.replace(/÷/g, "/");
       updateDisplay(processAnswer(), true);
-    }else if(keycode === 48){
+    }else if(keycode === 48 || keycode === 96){
       updateDisplay("0", false);
-    }else if(keycode === 49){
+    }else if(keycode === 49 || keycode === 97){
       updateDisplay("1", false);
-    }else if(keycode === 50){
+    }else if(keycode === 50 || keycode === 98){
       updateDisplay("2", false);
-    }else if(keycode === 51){
+    }else if(keycode === 51 || keycode === 99){
       updateDisplay("3", false);
-    }else if(keycode === 52){
+    }else if(keycode === 52 || keycode === 100){
       updateDisplay("4", false);
-    }else if(keycode === 53){
+    }else if(keycode === 53 || keycode === 101){
       updateDisplay("5", false);
-    }else if(keycode === 54){
+    }else if(keycode === 54 || keycode === 102){
       updateDisplay("6", false);
-    }else if(keycode === 55){
+    }else if(keycode === 55 || keycode === 103){
       updateDisplay("7", false);
-    }else if(keycode === 56){
+    }else if(keycode === 56 || keycode === 104){
       updateDisplay("8", false);
-    }else if(keycode === 57){
+    }else if(keycode === 57 || keycode === 105){
       updateDisplay("9", false);
     }else if(keycode === 8 || keycode === 12 || keycode === 46){
       updateDisplay("0", true);
