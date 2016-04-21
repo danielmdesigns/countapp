@@ -9,27 +9,34 @@
 var displayValue = "0";
 
 //CLICK && TOUCH
-$(".btn").on("click touch", function(){
-  var btnValue = $(this).data("value");
-  if(btnValue === "="){
-	displayValue = displayValue.replace(/×/g , "*");
-	displayValue = displayValue.replace(/÷/g , "/");
-	updateDisplay(processAnswer(), true);
-  }else if(btnValue === "clear"){
-	updateDisplay("0", true);
-  }else{
-	if(btnValue === "+" ||
-	   btnValue === "-" ||
-	   btnValue === "×" ||
-	   btnValue === "÷"){
-	 if((displayValue[displayValue.length-1] === "+") ||
-	   (displayValue[displayValue.length-1] === "-") ||
-	   (displayValue[displayValue.length-1] === "×") ||
-	   (displayValue[displayValue.length-1] === "÷")){
-	  displayValue = displayValue.substr(0, displayValue.length-1);
-	 }
+$(".btn").on("touchstart click", function(event){
+  event.stopPropagation();
+  event.preventDefault();
+  if(event.handled !== true) {
+	var btnValue = $(this).data("value");
+	if(btnValue === "="){
+	  displayValue = displayValue.replace(/×/g , "*");
+	  displayValue = displayValue.replace(/÷/g , "/");
+	  updateDisplay(processAnswer(), true);
+	}else if(btnValue === "clear"){
+	  updateDisplay("0", true);
+	}else{
+	  if(btnValue === "+" ||
+		 btnValue === "-" ||
+		 btnValue === "×" ||
+		 btnValue === "÷"){
+	   if((displayValue[displayValue.length-1] === "+") ||
+		 (displayValue[displayValue.length-1] === "-") ||
+		 (displayValue[displayValue.length-1] === "×") ||
+		 (displayValue[displayValue.length-1] === "÷")){
+		displayValue = displayValue.substr(0, displayValue.length-1);
+	   }
+	  }
+	  updateDisplay(btnValue, false);
 	}
-	updateDisplay(btnValue, false);
+  event.handled = true;
+  }else{
+	return false;
   }
 });
 
@@ -130,7 +137,7 @@ var updateDisplay = function(value, overwrite){
 
 //MODAL POPUP
 $(".modal-container").hide();
-$(".open-modal").on("click", function(event){
+$(".open-modal").on("click touchstart", function(event){
   "use strict";
   event.preventDefault();
   event.stopPropagation();
