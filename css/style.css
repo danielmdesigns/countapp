@@ -20,7 +20,16 @@ main {
 }
 
 main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -o-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
   flex-direction: column;
   background: #fd2660;
   background: -webkit-linear-gradient(#fd2660, #dc22a3, #c420d4);
@@ -38,17 +47,45 @@ main {
 }
 
 .row {
+  -webkit-flex: 7;
+  -moz-flex: 7;
+  -ms-flex: 7;
+  -o-flex: 7;
   flex: 7;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
   flex-direction: row;
 }
 
 .display,
 .btn {
+  -webkit-flex: 5;
+  -moz-flex: 5;
+  -ms-flex: 5;
+  -o-flex: 5;
   flex: 5;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   text-align: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
   justify-content: center;
+  -webkit-flex-flow: column wrap;
+  -moz-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  -o-flex-flow: column wrap;
   flex-flow: column wrap;
 }
 
@@ -74,6 +111,10 @@ header .icon {
   margin-right: 25px;
 }
 
+svg {
+  max-width: 110px;
+}
+
 a.link--white,
 a.link--white:visited,
 a.link--white:hover,
@@ -81,6 +122,7 @@ a.link--white:active,
 a.link--white:focus {
   color: #FFFFFF;
   text-decoration: none;
+  padding: 20px 0 20px 20px;
 }
 
 a.link--primary,
@@ -107,6 +149,7 @@ a.link--primary:visited:focus {
   padding: 20px;
   max-width: 599px;
   overflow: hidden;
+  clear: both;
 }
 
 button,

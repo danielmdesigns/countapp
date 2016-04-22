@@ -25,7 +25,16 @@ main
   height: 100vh
   
 main
+  display: -webkit-box   /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box        /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox    /* TWEENER - IE 10 */
+  display: -o-flexbox    
+  display: -webkit-flex     /* NEW - Chrome */
   display: flex
+  -webkit-flex-direction: column
+  -moz-flex-direction: column
+  -ms-flex-direction: column
+  -o-flex-direction: column
   flex-direction: column
   background: $primary
   background: -webkit-linear-gradient($primary, $secondary, $tertiary)
@@ -38,16 +47,44 @@ main
     max-width: 600px
     
 .row
+  -webkit-flex: 7
+  -moz-flex: 7
+  -ms-flex: 7
+  -o-flex: 7
   flex: 7
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
   display: flex
+  -webkit-flex-direction: row
+  -moz-flex-direction: row
+  -ms-flex-direction: row
+  -o-flex-direction: row
   flex-direction: row
   
 .display,
 .btn
+  -webkit-flex: 5
+  -moz-flex: 5
+  -ms-flex: 5
+  -o-flex: 5
   flex: 5
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
   display: flex
   text-align: center
+  -webkit-justify-content: center
+  -moz-justify-content: center
+  -ms-justify-content: center
+  -o-justify-content: center
   justify-content: center
+  -webkit-flex-flow: column wrap
+  -moz-flex-flow: column wrap
+  -ms-flex-flow: column wrap
+  -o-flex-flow: column wrap
   flex-flow: column wrap
   
 header
@@ -66,6 +103,9 @@ header
     font-size: 1.125rem
     float: right
     margin-right: 25px
+	
+svg
+	max-width: 110px
 
 a.link--white,
 a.link--white:visited,
@@ -74,6 +114,7 @@ a.link--white:active,
 a.link--white:focus
   color: $white
   text-decoration: none
+  padding: 20px 0 20px 20px
   
 a.link--primary,
 a.link--primary:visited
@@ -93,6 +134,7 @@ a.link--primary:visited
   padding: 20px
   max-width: 599px
   overflow: hidden
+  clear: both
 
 button,
 .btn,
