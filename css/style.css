@@ -19,6 +19,26 @@ main {
   height: 100vh;
 }
 
+header {
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+header .brand {
+  float: left;
+  margin-top: 14px;
+  margin-left: 25px;
+}
+
+header .menu-icon {
+  cursor: pointer;
+  float: right;
+  margin: 15px 25px 0px 0px;
+}
+
 main {
   display: -webkit-box;
   display: -moz-box;
@@ -89,42 +109,6 @@ main {
   flex-flow: column wrap;
 }
 
-header {
-  height: 50px;
-  width: 100%;
-  line-height: 50px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-header svg {
-  height: 1.5rem;
-  float: left;
-  fill: #FFFFFF;
-  margin-top: 14px;
-  margin-left: 25px;
-}
-
-header .icon {
-  font-size: 1.125rem;
-  float: right;
-  margin-right: 25px;
-}
-
-svg {
-  max-width: 110px;
-}
-
-a.link--white,
-a.link--white:visited,
-a.link--white:hover,
-a.link--white:active,
-a.link--white:focus {
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 20px 0 20px 20px;
-}
-
 a.link--primary,
 a.link--primary:visited {
   color: #fd2660;
@@ -132,9 +116,7 @@ a.link--primary:visited {
   font-weight: 500;
 }
 
-a.link--primary:hover,
-a.link--primary:active,
-a.link--primary:focus,
+a.link--primary:hover, a.link--primary:active, a.link--primary:focus,
 a.link--primary:visited:hover,
 a.link--primary:visited:active,
 a.link--primary:visited:focus {
