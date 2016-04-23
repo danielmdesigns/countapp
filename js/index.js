@@ -135,9 +135,11 @@ var updateDisplay = function(value, overwrite){
 
 })();
 
+
+
 //MODAL POPUP
 $(".modal-container").hide();
-$(".open-modal").on("click touchstart", function(event){
+$(".menu-icon").on("click touchstart", function(event){
   "use strict";
   event.preventDefault();
   event.stopPropagation();
