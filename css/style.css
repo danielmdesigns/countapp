@@ -203,6 +203,13 @@ h1 {
 
 p {
   margin: 20px 0;
+}
+
+ul {
+  margin-left: 6%;
+}
+
+p, li {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
