@@ -151,7 +151,10 @@ $(".close").on("click", function(){
   $("#modal").fadeOut();
 });
 
-
+$("#js-close").on("click", function(){
+  "use strict";
+  $("#modal").fadeOut();
+});
 
 //RUNNING IN APP MODE
 if(window.navigator.standalone){
