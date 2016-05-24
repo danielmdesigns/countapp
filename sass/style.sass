@@ -171,11 +171,20 @@ button,
     left: 0
     right: 0
   
-  
-  
-  
-  
-  
+.button
+	background-color: $primary
+	color: $white
+	padding: 15px 30px
+	border-radius: 4px
+	display: inline-block
+	text-align: center
+	margin: 0 auto
+	border: 0
+	font-size: 0.75rem
+	font-weight: 500
+	outline: $primary
+	@media(max-width: 450px)
+		width: 100%
 
 h1
   font-size: 1.25rem
@@ -210,7 +219,7 @@ p, li
 .modal
   box-sizing: border-box
   position: fixed
-  top: 30px
+  top: 0
   left: 0
   right: 0
   margin: 0 auto
@@ -232,6 +241,7 @@ p, li
   border: none
   background-color: transparent
   font-weight: bold
+  padding: 0 10px 10px 10px
   &:focus
     outline: none
   &:hover
