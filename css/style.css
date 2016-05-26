@@ -201,6 +201,26 @@ button,
   right: 0;
 }
 
+.button {
+  background-color: #fd2660;
+  color: #FFFFFF;
+  padding: 15px 30px;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  border: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  outline: #fd2660;
+}
+
+@media (max-width: 450px) {
+  .button {
+    width: 100%;
+  }
+}
+
 h1 {
   font-size: 1.25rem;
   font-weight: 500;
@@ -227,7 +247,7 @@ p, li {
 
 .modal-container:before {
   content: "";
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #FFFFFF;
   display: block;
   position: fixed;
   top: 0;
@@ -266,6 +286,7 @@ p, li {
   border: none;
   background-color: transparent;
   font-weight: bold;
+  padding: 0 10px 10px 10px;
 }
 
 .close:focus {
