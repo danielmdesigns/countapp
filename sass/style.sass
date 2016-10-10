@@ -110,6 +110,7 @@ a.link--primary:visited
 	color: $primary
 	text-decoration: underline
 	font-weight: 500
+	transition: color .4s ease-in
 	&:hover,
 	&:active,
 	&:focus
@@ -175,17 +176,21 @@ button,
 	right: 0
 
 .button
+	display: block
+	width: 200px
 	background-color: $primary
 	color: $white
 	padding: 15px 30px
 	border-radius: 4px
-	display: inline-block
 	text-align: center
-	margin: 0 auto
+	margin: 50px auto
 	border: 0
 	font-size: 0.75rem
 	font-weight: 500
-	outline: $primary
+	outline: $tertiary
+	transition: background-color .3s ease-in
+	&:hover
+		background-color: darken($primary, 4%)
 	@media(max-width: 450px)
 		width: 100%
 
@@ -225,3 +230,13 @@ p
 	max-width: 100%
 	z-index: 1
 	color: $black
+	
+img, .modal-logo
+	border: 0
+	text-align: center
+	
+.modal-logo
+	display: block
+	margin: 0 auto 40px
+	width: 50px
+	
