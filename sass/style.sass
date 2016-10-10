@@ -1,180 +1,179 @@
 $white: #FFFFFF
 $gray: #F6F6F6
 $drk-gray: #7B7B7B
-$black: #333
+$black: #444
 $primary: #fd2660
 $secondary: #dc22a3
 $tertiary: #c420d4
 
 *
-  box-sizing: border-box
-  margin: 0
-  padding: 0
+	box-sizing: border-box
+	margin: 0
+	padding: 0
 
 body
-  font-family: 'Roboto', sans-serif
-  color: $white
-  background-color: $gray
-  
+	font-family: 'Roboto', sans-serif
+	color: $white
+	background-color: $gray
+
 body,
 main
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100vh
-  
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100vh
+
 header
-  height: 50px
-  width: 100%
-  line-height: 50px
-  text-align: center
-  margin-top: 20px
-  @media screen and (orientation:landscape)
-  	margin-top: 0
-  .brand
-    float: left
-    margin-top: 14px
-    margin-left: 25px
-  .menu-icon
-  	cursor: pointer
-  	float: right
-  	margin: 15px 25px 0px 0px
-  
+	height: 50px
+	width: 100%
+	line-height: 50px
+	text-align: center
+	margin-top: 20px
+	@media screen and (orientation:landscape)
+	.brand
+		float: left
+		margin-top: 14px
+		margin-left: 25px
+		width: 30px
+	.menu-icon
+		cursor: pointer
+		float: right
+		margin: 15px 25px 0px 0px
+		height: 15px
+
 main
-  display: -webkit-box
-  display: -moz-box
-  display: -ms-flexbox
-  display: -o-flexbox
-  display: -webkit-flex
-  display: flex
-  background: $primary
-  background: -webkit-linear-gradient($primary, $secondary, $tertiary)
-  background: -o-linear-gradient($primary, $secondary, $tertiary)
-  background: -moz-linear-gradient($primary, $secondary, $tertiary)
-  background: linear-gradient($primary, $secondary, $tertiary)
-  -webkit-flex-direction: column
-  -moz-flex-direction: column
-  -ms-flex-direction: column
-  -o-flex-direction: column
-  flex-direction: column
-  @media(min-width: 600px)
-    position: relative
-    margin: 0 auto
-    max-width: 600px
-	
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -o-flexbox
+	display: -webkit-flex
+	display: flex
+	background: $primary
+	background: -webkit-linear-gradient($primary, $secondary, $tertiary)
+	background: -o-linear-gradient($primary, $secondary, $tertiary)
+	background: -moz-linear-gradient($primary, $secondary, $tertiary)
+	background: linear-gradient($primary, $secondary, $tertiary)
+	-webkit-flex-direction: column
+	-moz-flex-direction: column
+	-ms-flex-direction: column
+	-o-flex-direction: column
+	flex-direction: column
+	@media(min-width: 600px)
+		position: relative
+		margin: 0 auto
+		max-width: 600px
+
 .row
-  -webkit-flex: 7
-  -moz-flex: 7
-  -ms-flex: 7
-  -o-flex: 7
-  flex: 7
-  display: -webkit-box
-  display: -moz-box
-  display: -ms-flexbox
-  display: -webkit-flex
-  display: flex
-  -webkit-flex-direction: row
-  -moz-flex-direction: row
-  -ms-flex-direction: row
-  -o-flex-direction: row
-  flex-direction: row
-  
+	-webkit-flex: 7
+	-moz-flex: 7
+	-ms-flex: 7
+	-o-flex: 7
+	flex: 7
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+	-webkit-flex-direction: row
+	-moz-flex-direction: row
+	-ms-flex-direction: row
+	-o-flex-direction: row
+	flex-direction: row
+
 .display,
 .btn
-  -webkit-flex: 5
-  -moz-flex: 5
-  -ms-flex: 5
-  -o-flex: 5
-  flex: 5
-  display: -webkit-box
-  display: -moz-box
-  display: -ms-flexbox
-  display: -webkit-flex
-  display: flex
-  text-align: center
-  -webkit-justify-content: center
-  -moz-justify-content: center
-  -ms-justify-content: center
-  -o-justify-content: center
-  justify-content: center
-  -webkit-flex-flow: column wrap
-  -moz-flex-flow: column wrap
-  -ms-flex-flow: column wrap
-  -o-flex-flow: column wrap
-  flex-flow: column wrap
-  
+	-webkit-flex: 5
+	-moz-flex: 5
+	-ms-flex: 5
+	-o-flex: 5
+	flex: 5
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+	text-align: center
+	-webkit-justify-content: center
+	-moz-justify-content: center
+	-ms-justify-content: center
+	-o-justify-content: center
+	justify-content: center
+	-webkit-flex-flow: column wrap
+	-moz-flex-flow: column wrap
+	-ms-flex-flow: column wrap
+	-o-flex-flow: column wrap
+	flex-flow: column wrap
+
 a.link--primary,
 a.link--primary:visited
-  color: $primary
-  text-decoration: underline
-  font-weight: 500
-  &:hover,
-  &:active,
-  &:focus
-    color: darken($primary, 5%)
-  
+	color: $primary
+	text-decoration: underline
+	font-weight: 500
+	&:hover,
+	&:active,
+	&:focus
+		color: darken($primary, 5%)
+
 .display
-  width: 100%
-  font-size: 3.5em
-  font-weight: 100
-  text-align: right
-  padding: 20px
-  max-width: 599px
-  overflow: hidden
-  clear: both
+	width: 100%
+	font-size: 3.5em
+	font-weight: 100
+	text-align: right
+	padding: 20px
+	max-width: 599px
+	overflow: hidden
+	clear: both
 
 button,
 .btn,
 .eval,
 .close,
-  cursor: pointer
-  -webkit-tap-highlight-color: rgba(0,0,0,0)
-  
+	cursor: pointer
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+
 .btn:active
-  transform: scale(0.8)
+	transform: scale(0.8)
 
 .eval
-  flex: 1 1 20%
-  background-color: $white
-  color: $tertiary
-  font-size: 2rem
-  box-shadow: inset 0 20px 20px -20px $drk-gray
-  &:hover
-    box-shadow: inset 0 20px 20px -20px darken($drk-gray, 10%)
-  &:active
-    transform: scale(1)
-  
+	flex: 1 1 20%
+	background-color: $white
+	color: $tertiary
+	font-size: 2rem
+	box-shadow: inset 0 20px 20px -20px $drk-gray
+	&:hover
+		box-shadow: inset 0 20px 20px -20px darken($drk-gray, 10%)
+	&:active
+		transform: scale(1)
+
 .hvr
-  vertical-align: middle
-  -webkit-transform: translateZ(0)
-  transform: translateZ(0)
-  -webkit-backface-visibility: hidden
-  backface-visibility: hidden
-  -moz-osx-font-smoothing: grayscale
-  position: relative
-  overflow: hidden
-  &:after
-    content: ""
-    position: absolute
-    z-index: -1
-    left: 50%
-    right: 50%
-    bottom: 0
-    background: $tertiary
-    height: 4px
-    -webkit-transition-property: left, right
-    transition-property: left, right
-    -webkit-transition-duration: 0.1s
-    transition-duration: 0.1s
-    -webkit-transition-timing-function: ease-out
-    transition-timing-function: ease-out
-  &:active:after
-    left: 0
-    right: 0
-<<<<<<< HEAD
-=======
-  
+	vertical-align: middle
+	-webkit-transform: translateZ(0)
+	transform: translateZ(0)
+	-webkit-backface-visibility: hidden
+	backface-visibility: hidden
+	-moz-osx-font-smoothing: grayscale
+	position: relative
+	overflow: hidden
+.hvr:after
+	content: ""
+	position: absolute
+	z-index: -1
+	left: 50%
+	right: 50%
+	bottom: 0
+	background: $tertiary
+	height: 4px
+	-webkit-transition-property: left, right
+	transition-property: left, right
+	-webkit-transition-duration: 0.1s
+	transition-duration: 0.1s
+	-webkit-transition-timing-function: ease-out
+	transition-timing-function: ease-out
+.hvr:active:after
+	left: 0
+	right: 0
+
 .button
 	background-color: $primary
 	color: $white
@@ -189,65 +188,40 @@ button,
 	outline: $primary
 	@media(max-width: 450px)
 		width: 100%
->>>>>>> origin/master
 
-h1
-  font-size: 1.25rem
-  font-weight: 500
-  color: $primary
 p
 	margin: 20px 0
-ul
-	margin-left: 6%
-
-p, li
-  font-size: 1rem
-  font-weight: 300
-  line-height: 1.5
+	font-size: 1rem
+	font-weight: 300
+	line-height: 1.5
 
 .is-hidden
 	display: none  
 
 .modal-container
-  &:before
-    content: ""
-    background-color: $white
-    display: block
-    position: fixed
-    top: 0
-    left: 0
-    bottom: 0
-    right: 0
-  &:closed
-    display: none
-  
+	&:before
+		content: ""
+		background-color: $white
+		display: block
+		position: fixed
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+	&:closed
+		display: none
+
 .modal
-  box-sizing: border-box
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
-  margin: 0 auto
-  display: block
-  background: white
-  padding: 40px
-  width: 600px
-  max-width: 100%
-  z-index: 1
-  color: $black
-  
-.close
-  color: darken($gray, 20%)
-  font-size: 1rem
-  position: absolute
-  top: 20px
-  right: 20px
-  cursor: pointer
-  border: none
-  background-color: transparent
-  font-weight: bold
-  padding: 0 10px 10px 10px
-  &:focus
-    outline: none
-  &:hover
-    color: $drk-gray
+	box-sizing: border-box
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	margin: 0 auto
+	display: block
+	background: white
+	padding: 40px
+	width: 600px
+	max-width: 100%
+	z-index: 1
+	color: $black
