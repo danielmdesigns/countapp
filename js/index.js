@@ -118,16 +118,14 @@ var updateDisplay = function(value, overwrite){
 	}
   }
   //CHECK DISPLAY LENGTH
-  if(displayValue.length >= 10 && displayValue.length <= 16){
+  if(displayValue.length >= 12 && displayValue.length <= 20){
 	  $(".display").css("font-size", "2em");
-  }else if(displayValue.length >= 16 && displayValue.length <= 30){
+  }else if(displayValue.length >= 21 && displayValue.length <= 30){
 	  $(".display").css("font-size", "1em");
-  }else if(displayValue.length >= 30){
+  }else if(displayValue.length >= 31){
 	  $(".btn").addClass("disable");
-  }else if(displayValue.length <= 10){
-	  $(".display").css("font-size", "3.5em");
   }else{
-  $(".display").css("font-size", "3.5em");
+  	   $(".display").css("font-size", "3.5em");
 }
   //UPDATE DISPLAY BASED ON LENGTH
   $(".display").text(displayValue);
