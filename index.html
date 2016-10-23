@@ -30,6 +30,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:500,300,100" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="ath/ath.css">
 
 <link rel="apple-touch-icon" sizes="57x57" href="img/icon/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="img/icon/apple-touch-icon-60x60.png">
@@ -95,9 +96,8 @@
 <div id="modal" class="modal-container is-hidden">
   <div class="modal">
   	<img class="modal-logo" src="img/count-fcg.jpg" alt="Count">
-    <p>Count is the perfect mini calculator for all your devices. Saving you time and effort, offering an attractive and beautiful interface, along with, providing easy to use solutions for quick and convenient work with numbers.</p>
-    <p>It's completely FREE and easy to use. Keypad and Number pad's are fully supported and you can save this to your phone or tablet home screen just like all your other favorite apps.</p>
-    <p>If you have any questions contact us <a class="link--primary" href="mailto:daniel@danielmdesigns.com">here</a>.</p>
+    <p>Count is the perfect mini calculator that saves you time and effort. Offering an attractive interface that provides easy to use solutions for quick work with numbers. Keypads are also fully supported.</p>
+    <p>Contact us <a class="link--primary" href="mailto:daniel@danielmdesigns.com">hello@countapp.com</a>.</p>
     <button id="js-close" class="button">Got it!</button>
   </div>
 </div>
@@ -105,11 +105,22 @@
 <script src="js/jquery.js"></script>
 <script src="js/index.js"></script>
 <script src="js/fastclick.js"></script>
+<script src="js/cache.js"></script>
+<script src="ath/ath.min.js"></script>
 <script>
 (function(){
 FastClick.attach(document.body);
 });
 </script>
-<script src="js/cache.js"></script>
+<script>
+addToHomescreen({
+	//debug mode only
+	/*debug: true,*/
+	lifespan: 0,
+	maxDisplayCount: 0,
+	modal: true
+});
+//addToHomescreen.removeSession();
+</script>
 </body>
 </html>
