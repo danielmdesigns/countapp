@@ -32,22 +32,12 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="ath/ath.css">
 
-<link rel="apple-touch-icon" sizes="57x57" href="img/icon/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="img/icon/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="img/icon/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="img/icon/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/icon/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="img/icon/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="img/icon/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="img/icon/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="img/icon/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="img/icon/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="img/icon/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="img/icon/manifest.json">
-<link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#fc2662">
-<meta name="msapplication-TileColor" content="#f6256f">
-<meta name="msapplication-TileImage" content="img/icon/mstile-144x144.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png?v=ico3">
+<link rel="icon" type="image/png" href="img/icon/favicon-32x32.png?v=ico3" sizes="32x32">
+<link rel="icon" type="image/png" href="img/icon/favicon-16x16.png?v=ico3" sizes="16x16">
+<link rel="manifest" href="img/icon/manifest.json?v=ico3">
+<link rel="mask-icon" href="img/icon/safari-pinned-tab.svg?v=ico3" color="#fd2660">
+<link rel="shortcut icon" href="img/icon/favicon.ico?v=ico3">
 <meta name="theme-color" content="#ffffff">
 
 </head>
@@ -58,7 +48,8 @@
     <a href="http://www.danielmdesigns.com" target="_blank">
       <img class="brand" src="img/count.png" alt="Count">
     </a>
-    <img class="menu-icon" src="img/ellipsis.png" alt="Menu Icon">
+    <span class="menu-icon">&vellip;</span>
+    <!--<img class="menu-icon" src="img/ellipsis.png" alt="Menu Icon">-->
   </header>
   <div>
     <div class="display">0</div>
@@ -95,7 +86,7 @@
 <!-- Modal -->
 <div id="modal" class="modal-container is-hidden">
   <div class="modal">
-  	<img class="modal-logo" src="img/count-fcg.jpg" alt="Count">
+  	<img class="modal-logo" src="img/count-fcg.jpg?&v=2" alt="Count">
     <p>Count is the perfect mini calculator that saves you time and effort. Offering an attractive interface that provides easy to use solutions for quick work with numbers. Keypads are also fully supported.</p>
     <p>Contact us <a class="link--primary" href="mailto:daniel@danielmdesigns.com">hello@countapp.com</a>.</p>
     <button id="js-close" class="button">Got it!</button>
@@ -114,7 +105,6 @@ FastClick.attach(document.body);
 </script>
 <script>
 addToHomescreen({
-	//debug mode only
 	/*debug: true,*/
 	lifespan: 0,
 	maxDisplayCount: 0,
