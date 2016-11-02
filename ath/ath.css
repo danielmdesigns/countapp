@@ -188,7 +188,7 @@
 
 .ath-ios.ath-phone:after {
 	content: '';
-	background: #eee;
+	background: #FFF;
 	position: absolute;
 	width: 2em;
 	height: 2em;
@@ -197,12 +197,11 @@
 	margin-left: -1em;
 	-webkit-transform: scaleX(0.9) rotate(45deg);
 	transform: scaleX(0.9) rotate(45deg);
-	box-shadow: 0.2em 0.2em 0 #d1d1d1;
 }
 
 .ath-ios.ath-tablet:after {
 	content: '';
-	background: #eee;
+	background: #FFF;
 	position: absolute;
 	width: 2em;
 	height: 2em;
