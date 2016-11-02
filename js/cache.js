@@ -1,3 +1,3 @@
-if(window.location.search.indexOf('&v=') === -1){
-	window.location.search += '&v=1023.1';
+if(window.location.search.indexOf('v=') === -1){
+	window.location.search += 'v=1.4';
 }
