@@ -2,12 +2,12 @@
 	"name": "Count",
 	"icons": [
 		{
-			"src": "\/android-chrome-192x192.png?v=ico2",
+			"src": "\/android-chrome-192x192.png?v=1109",
 			"sizes": "192x192",
 			"type": "image\/png"
 		},
 		{
-			"src": "\/android-chrome-256x256.png?v=ico2",
+			"src": "\/android-chrome-256x256.png?v=1109",
 			"sizes": "256x256",
 			"type": "image\/png"
 		}

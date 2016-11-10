@@ -154,8 +154,6 @@ $("#js-close").on("click", function(){
   $("#modal").fadeOut();
 });
 
-
-
 //RUNNING IN APP MODE
 if(window.navigator.standalone){
 	//alert("APP MODE");
