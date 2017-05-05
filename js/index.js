@@ -43,9 +43,6 @@ $(".btn").on("touchstart click", function(event){
 //KEYPAD
 $(document).keydown(function(event) {
   var keycode = event.which || event.charCode || event.keyCode;
-  //BETWEEN 48 - 57
-  //BETWEEN 96 - 111
-  //13, 8
   if ((keycode >= 48 && keycode <= 57) || (keycode >= 96 && keycode <= 111) || (keycode >= 187 && keycode <= 191) || (keycode >= 12 && keycode <= 13) || keycode === 8 || keycode === 46) {
     if(keycode === 13 || keycode === 187){
       displayValue = displayValue.replace(/×/g, "*");
