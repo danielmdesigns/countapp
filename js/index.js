@@ -154,7 +154,7 @@ $("#js-close").on("click", function(){
 //RUNNING IN APP MODE
 if(window.navigator.standalone){
 	//alert("APP MODE");
-	$("header").css("margin-top","35px");
+	$("header").css("margin-top","20px");
 }else{
 	//alert("Desktop...");
 	$("header").css("margin-top","0");
